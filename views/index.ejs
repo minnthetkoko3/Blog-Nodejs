@@ -1,0 +1,28 @@
+<div class="author">
+    <h1 class="author__heading">Hi, I am Minn Thet Ko Ko</h1>
+    <p class="author__body">Web Developer and content creator.</p>
+</div>
+
+<img src="/img/hero-image.webp" alt="spiderman">
+
+<section class="articles">
+    <h2 class="articles__heading">Latest Post</h2>
+
+    <ul class="article-ul">
+        <% data.forEach(post => { %>
+
+        <li>
+            <a href="/post/<%= post._id %>">
+                <span><%= post.title %></span>
+                <span class="articles-list__date"><%= post.createAt.toDateString() %></span>
+            </a>
+        </li>
+        <% }) %>
+    </ul>
+
+    <% if (nextPage !== null) { %>
+        <a href="/?page=<% nextPage %>" class="pagination">&lt; View Older Post</a> 
+    <% } %>
+    
+</section>
+
