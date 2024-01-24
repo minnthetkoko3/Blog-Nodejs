@@ -9,7 +9,7 @@ const methodOverrride = require('method-override');
 const {isActiveRoute} = require('./server/helpers/routerHelper');
 
 const app = express();
-const PORT = 5000|| process.env.PORT;
+const PORT = 5555|| process.env.PORT;
 
 app.use(express.static('public'))
 
